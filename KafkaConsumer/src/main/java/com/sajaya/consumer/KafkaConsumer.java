@@ -17,13 +17,4 @@ public class KafkaConsumer {
 
             LOGGER.info(String.format("consumer 1: Event message received -> %s", eventMessage));
         }
-
-        @KafkaListener(
-                topics = "WikiMediaRecentChange",
-                groupId = "myGroup"
-        )
-        public void consume2(String eventMessage){
-
-                LOGGER.info(String.format("consumer 2: Event message received -> %s", eventMessage));
-        }
 }

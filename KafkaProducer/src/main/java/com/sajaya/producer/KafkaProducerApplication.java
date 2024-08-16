@@ -1,10 +1,11 @@
 package com.sajaya.producer;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Arrays;
 
 @SpringBootApplication
 public class KafkaProducerApplication implements CommandLineRunner {
@@ -14,9 +15,10 @@ public class KafkaProducerApplication implements CommandLineRunner {
     }
 
     @Autowired
-    private  KafkaProducer kafkaProducer;
+    private KafkaProducer kafkaProducer;
+
     @Override
     public void run(String... args) throws Exception {
-        kafkaProducer.sendMessage();
+        kafkaProducer.sendMessage(Arrays.asList("Topic1", "Topic2", "Topic3"));
     }
 }

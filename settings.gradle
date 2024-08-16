@@ -1,4 +1,6 @@
 rootProject.name = 'WikiMedia'
 include 'KafkaProducer'
 include 'KafkaConsumer'
+include 'KafkaConsumer2'
+include 'KafkaConsumer3'
 
